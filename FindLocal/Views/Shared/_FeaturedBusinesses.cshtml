@@ -1,0 +1,84 @@
+﻿@model IEnumerable<FindLocal.Models.Business>
+
+<h2 class="title-v4">Featured Businesses</h2>
+<div class="row margin-bottom-50">
+    <div class="col-sm-6 sm-margin-bottom-50">
+        @{
+            var b1 = Model.First();
+            var cnt = 0;
+            <div class="blog-grid margin-bottom-40">
+                <div class="carousel slide carousel-v2" id="portfolio-carousel">
+                    <ol class="carousel-indicators">
+                        <li class="rounded-x active" data-target="#portfolio-carousel" data-slide-to="0"></li>
+                        <li class="rounded-x" data-target="#portfolio-carousel" data-slide-to="1"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img class="img-responsive" src="@b1.media.featureImage" alt="">
+                        </div>
+                        @foreach (var src in b1.media.images)
+                        {
+                            <div class="item">
+                                <img class="img-responsive" src="@src" alt="">
+                            </div>
+                        }
+                    </div>
+                </div>
+                <h3>@Html.ActionLink(b1.name, "Index", "Business", new { id = b1.id }, null)</h3>
+                <p>@b1.description</p>
+                @Html.ActionLink("Read More", "Business", "Business", new { id = b1.id }, new { @class = "r-more" })
+            </div>
+            if (b1.comments.Count > 0)
+            {
+                foreach (var comment in b1.comments)
+                {
+                    <div class="blog-thumb-v3">
+                        <small><a href="#">@comment.username</a></small>
+                        <h3><a href="#">@comment.text</a></h3>
+                    </div>
+                    cnt++;
+                    if (cnt == 1) { break; }
+                    <hr class="hr-xs">
+                }
+            }
+            else
+            {
+                <div>No Comments</div>
+            }
+
+
+        }
+
+    </div>
+    <div class="col-sm-6">
+        @{
+            var b2 = Model.ElementAt(1);
+            var cnt2 = 0;
+            <div class="blog-grid margin-bottom-40">
+                <img class="img-responsive" src="@b2.media.featureImage" alt="">
+                <h3>@Html.ActionLink(b2.name, "Index", "Business", new { id = b2.id }, null)</h3>
+                <p>@b2.description</p>
+                @Html.ActionLink("Read More", "Index", "Business", new { id = b2.id }, new { @class = "r-more" })
+            </div>
+            if (b2.comments.Count > 0)
+            {
+                foreach (var comment in b2.comments)
+                {
+                    <div class="blog-thumb-v3">
+                        <small><a href="#">@comment.username</a></small>
+                        <h3><a href="#">@comment.text</a></h3>
+                    </div>
+                    cnt2++;
+                    if (cnt2 == 1) { break; }
+                    <hr class="hr-xs">
+                }
+            }
+            else
+            {
+                <div>No comments.</div>
+            }
+
+
+        }
+    </div>
+</div>

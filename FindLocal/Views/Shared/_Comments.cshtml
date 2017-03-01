@@ -1,0 +1,18 @@
+﻿@model IEnumerable<FindLocal.Models.Comment>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+<h2 class="title-v4">Latest Comments</h2>
+<div class="margin-bottom-50">
+    @foreach (var comment in Model)
+    {        
+        <div class="blog-thumb-v3">
+            <h3>@Html.ActionLink(comment.business.name, "Index","Business", new { id = comment.business.id }, null)</h3>
+            <p>@comment.text</p>
+            <small>&nbsp;&nbsp;&nbsp; - @comment.username</small>
+            @*<h3><a href="#">@comment.text</a></h3>*@
+        </div>
+        <hr class="hr-xs">
+    }
+</div>

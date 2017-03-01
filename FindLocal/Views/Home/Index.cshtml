@@ -1,31 +1,365 @@
-﻿@{
+﻿@model FindLocal.Models.Business
+@{
     ViewBag.Title = "Home Page";
 }
+<div class="container margin-bottom-40">
+    <div class="row">
+        <!-- Main Content -->
+        <div class="col-md-9">
+            <!-- Tab v4 -->
+            <div class="tab-v4 margin-bottom-40">
+                <!-- Tab Heading -->
+                <div class="tab-heading">
+                    <h2>Latest Business</h2>
+                    @*<ul class="nav nav-tabs" role="tablist">
+                        <li class="home active">
+                            <a href="#tab-v4-a1" role="tab" data-toggle="tab">All</a>
+                        </li>
+                        <li>
+                            <a href="#tab-v4-a2" role="tab" data-toggle="tab">Fashion</a>
+                        </li>
+                        <li>
+                            <a href="#tab-v4-a3" role="tab" data-toggle="tab">Education</a>
+                        </li>
+                    </ul>*@
+                </div>
+                <!-- End Latest News -->
+                <!-- Tab Content -->
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="tab-v4-a1">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <!-- Blog Grid -->
+                                <div class="blog-grid sm-margin-bottom-40">
+                                    <img class="img-responsive" src="@Model.media.featureImage" alt="">
+                                    <h3>@Html.ActionLink(Model.name,"Index","Business", new { id = Model.id}, null)</h3>                                   
+                                    <p>@Model.description</p>
+                                    @Html.ActionLink("Learn More", "Index", "Business", new { id = Model.id }, new { @class = "r-more"})                                    
+                                </div>
+                                <!-- End Blog Grid -->
+                            </div>
+                            @*<div class="col-sm-5">
+                                <!-- Blog Thumb -->
+                                <div class="blog-thumb margin-bottom-20">
+                                    <div class="blog-thumb-hover">
+                                        <img src="~/assets/img/blog/img42.jpg" alt="">
+                                        <a class="hover-grad" href="blog_single.html"><i class="fa fa-video-camera"></i></a>
+                                    </div>
+                                    <div class="blog-thumb-desc">
+                                        <h3><a href="blog_single.html">8 health benefits and drawbacks of coffee</a></h3>
+                                        <ul class="blog-thumb-info">
+                                            <li>Mar 6, 2015</li>
+                                            <li><a href="#"><i class="fa fa-comments"></i> 0</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- End Blog Thumb -->
+                                <!-- Blog Thumb -->
+                                <div class="blog-thumb margin-bottom-20">
+                                    <div class="blog-thumb-hover">
+                                        <img src="~/assets/img/blog/img10.jpg" alt="">
+                                        <a class="hover-grad" href="blog_single.html"><i class="fa fa-volume-up"></i></a>
+                                    </div>
+                                    <div class="blog-thumb-desc">
+                                        <h3><a href="blog_single.html">Harvard tops list of world university rankings again</a></h3>
+                                        <ul class="blog-thumb-info">
+                                            <li>Mar 6, 2015</li>
+                                            <li><a href="#"><i class="fa fa-comments"></i> 0</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- End Blog Thumb -->
+                                <!-- Blog Thumb -->
+                                <div class="blog-thumb margin-bottom-20">
+                                    <div class="blog-thumb-hover">
+                                        <img src="~/assets/img/blog/img18.jpg" alt="">
+                                        <a class="hover-grad" href="blog_single.html"><i class="fa fa-volume-up"></i></a>
+                                    </div>
+                                    <div class="blog-thumb-desc">
+                                        <h3><a href="blog_single.html">Stylish things to do, see and buy this week</a></h3>
+                                        <ul class="blog-thumb-info">
+                                            <li>Mar 6, 2015</li>
+                                            <li><a href="#"><i class="fa fa-comments"></i> 0</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- End Blog Thumb -->
+                                <!-- Blog Thumb -->
+                                <div class="blog-thumb margin-bottom-20">
+                                    <div class="blog-thumb-hover">
+                                        <img src="~/assets/img/blog/img20.jpg" alt="">
+                                        <a class="hover-grad" href="blog_single.html"><i class="fa fa-photo"></i></a>
+                                    </div>
+                                    <div class="blog-thumb-desc">
+                                        <h3><a href="blog_single.html">Dogs in the road - make your road safe for your dog</a></h3>
+                                        <ul class="blog-thumb-info">
+                                            <li>Mar 6, 2015</li>
+                                            <li><a href="#"><i class="fa fa-comments"></i> 0</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- End Blog Thumb -->
+                                <!-- Blog Thumb -->
+                                <div class="blog-thumb">
+                                    <div class="blog-thumb-hover">
+                                        <img src="~/assets/img/blog/img13.jpg" alt="">
+                                        <a class="hover-grad" href="blog_single.html"><i class="fa fa-photo"></i></a>
+                                    </div>
+                                    <div class="blog-thumb-desc">
+                                        <h3><a href="blog_single.html">10 great novels of the year</a></h3>
+                                        <ul class="blog-thumb-info">
+                                            <li>Mar 6, 2015</li>
+                                            <li><a href="#"><i class="fa fa-comments"></i> 0</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- End Blog Thumb -->
+                            </div>*@
+                        </div><!--/end row-->
+                    </div>
+                    <div class="tab-pane fade" id="tab-v4-a2">
+                        <div class="row">
+                            <div class="col-sm-7">
+                                <!-- Blog Grid -->
+                                <div class="blog-grid sm-margin-bottom-40">
+                                    <img class="img-responsive" src="~/assets/img/blog/img9.jpg" alt="">
+                                    <h3><a href="blog_single.html">Is this the end for fashion police?</a></h3>
+                                    <ul class="blog-grid-info">
+                                        <li>Susie Lau</li>
+                                        <li>Mar 7, 2015</li>
+                                        <li><a href="#"><i class="fa fa-comments"></i> 0</a></li>
+                                    </ul>
+                                    <p>Mauris iaculis nisl eu ipsum dapibus pretium. Morbi quis justo non turpis cursus pharetra. Cras ac ligula sem. Nulla facilisi. Curabitur vulputate cursus ornare. Sed enim sapien, sodales at augue vel, molestie commodo velit.</p>
+                                    <a class="r-more" href="blog_single.html">Read More</a>
+                                </div>
+                                <!-- End Blog Grid -->
+                            </div>
+                            <div class="col-sm-5">
+                                <!-- Blog Thumb -->
+                                <div class="blog-thumb margin-bottom-20">
+                                    <div class="blog-thumb-hover">
+                                        <img src="~/assets/img/blog/img16.jpg" alt="">
+                                        <a class="hover-grad" href="blog_single.html"><i class="fa fa-video-camera"></i></a>
+                                    </div>
+                                    <div class="blog-thumb-desc">
+                                        <h3><a href="blog_single.html">Nadège Vanhee-Cybulski makes Hermès debut</a></h3>
+                                        <ul class="blog-thumb-info">
+                                            <li>Mar 6, 2015</li>
+                                            <li><a href="#"><i class="fa fa-comments"></i> 0</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- End Blog Thumb -->
+                                <!-- Blog Thumb -->
+                                <div class="blog-thumb margin-bottom-20">
+                                    <div class="blog-thumb-hover">
+                                        <img src="~/assets/img/blog/img15.jpg" alt="">
+                                        <a class="hover-grad" href="blog_single.html"><i class="fa fa-photo"></i></a>
+                                    </div>
+                                    <div class="blog-thumb-desc">
+                                        <h3><a href="blog_single.html">Minimalism gives way to embroidery and crystals as Paris shows draw to a close</a></h3>
+                                        <ul class="blog-thumb-info">
+                                            <li>Mar 6, 2015</li>
+                                            <li><a href="#"><i class="fa fa-comments"></i> 0</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- End Blog Thumb -->
+                                <!-- Blog Thumb -->
+                                <div class="blog-thumb margin-bottom-20">
+                                    <div class="blog-thumb-hover">
+                                        <img src="~/assets/img/blog/img17.jpg" alt="">
+                                        <a class="hover-grad" href="blog_single.html"><i class="fa fa-photo"></i></a>
+                                    </div>
+                                    <div class="blog-thumb-desc">
+                                        <h3><a href="blog_single.html">In bed with Cara Delevingne as she talks bags, boys and bunnies</a></h3>
+                                        <ul class="blog-thumb-info">
+                                            <li>Mar 6, 2015</li>
+                                            <li><a href="#"><i class="fa fa-comments"></i> 0</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- End Blog Thumb -->
+                                <!-- Blog Thumb -->
+                                <div class="blog-thumb margin-bottom-20">
+                                    <div class="blog-thumb-hover">
+                                        <img src="~/assets/img/blog/img24.jpg" alt="">
+                                        <a class="hover-grad" href="blog_single.html"><i class="fa fa-photo"></i></a>
+                                    </div>
+                                    <div class="blog-thumb-desc">
+                                        <h3><a href="blog_single.html">Malaika Firth tells all: 'I met my boyfriend through Twitter'</a></h3>
+                                        <ul class="blog-thumb-info">
+                                            <li>Mar 6, 2015</li>
+                                            <li><a href="#"><i class="fa fa-comments"></i> 0</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- End Blog Thumb -->
+                                <!-- Blog Thumb -->
+                                <div class="blog-thumb">
+                                    <div class="blog-thumb-hover">
+                                        <img src="~/assets/img/blog/img18.jpg" alt="">
+                                        <a class="hover-grad" href="blog_single.html"><i class="fa fa-volume-up"></i></a>
+                                    </div>
+                                    <div class="blog-thumb-desc">
+                                        <h3><a href="blog_single.html">Instagram style tips of the week</a></h3>
+                                        <ul class="blog-thumb-info">
+                                            <li>Mar 6, 2015</li>
+                                            <li><a href="#"><i class="fa fa-comments"></i> 0</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- End Blog Thumb -->
+                            </div>
+                        </div><!--/end row-->
+                    </div>
+                    <div class="tab-pane fade" id="tab-v4-a3">
+                        <div class="row">
+                            <div class="col-sm-7">
+                                <!-- Blog Grid -->
+                                <div class="blog-grid sm-margin-bottom-40">
+                                    <img class="img-responsive" src="~/assets/img/blog/img13.jpg" alt="">
+                                    <h3><a href="blog_single.html">Education news, opinion and guides</a></h3>
+                                    <ul class="blog-grid-info">
+                                        <li>Richard Garner</li>
+                                        <li>Mar 9, 2015</li>
+                                        <li><a href="#"><i class="fa fa-comments"></i> 0</a></li>
+                                    </ul>
+                                    <p>Nulla gravida sit amet odio vel posuere. Proin maximus est diam, sed iaculis arcu ultrices sed. Quisque nisi diam, sodales sit amet diam ut, bibendum interdum metus. Pellentesque urna magna, sollicitudin vel semper quis, iaculis sed neque.</p>
+                                    <a class="r-more" href="blog_single.html">Read More</a>
+                                </div>
+                                <!-- End Blog Grid -->
+                            </div>
+                            <div class="col-sm-5">
+                                <!-- Blog Thumb -->
+                                <div class="blog-thumb margin-bottom-20">
+                                    <div class="blog-thumb-hover">
+                                        <img src="~/assets/img/blog/img1.jpg" alt="">
+                                        <a class="hover-grad" href="blog_single.html"><i class="fa fa-photo"></i></a>
+                                    </div>
+                                    <div class="blog-thumb-desc">
+                                        <h3><a href="blog_single.html">Learning as you're earning: The alternative to a degree</a></h3>
+                                        <ul class="blog-thumb-info">
+                                            <li>Mar 6, 2015</li>
+                                            <li><a href="#"><i class="fa fa-comments"></i> 0</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- End Blog Thumb -->
+                                <!-- Blog Thumb -->
+                                <div class="blog-thumb margin-bottom-20">
+                                    <div class="blog-thumb-hover">
+                                        <img src="~/assets/img/blog/img11.jpg" alt="">
+                                        <a class="hover-grad" href="blog_single.html"><i class="fa fa-video-camera"></i></a>
+                                    </div>
+                                    <div class="blog-thumb-desc">
+                                        <h3><a href="blog_single.html">Universities found to offer ‘unlawful’ terms to students</a></h3>
+                                        <ul class="blog-thumb-info">
+                                            <li>Mar 6, 2015</li>
+                                            <li><a href="#"><i class="fa fa-comments"></i> 0</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- End Blog Thumb -->
+                                <!-- Blog Thumb -->
+                                <div class="blog-thumb margin-bottom-20">
+                                    <div class="blog-thumb-hover">
+                                        <img src="~/assets/img/blog/img2.jpg" alt="">
+                                        <a class="hover-grad" href="blog_single.html"><i class="fa fa-photo"></i></a>
+                                    </div>
+                                    <div class="blog-thumb-desc">
+                                        <h3><a href="blog_single.html">25 Unconventional Business Books that You Won't See on Most Bookshelves (But Should)</a></h3>
+                                        <ul class="blog-thumb-info">
+                                            <li>Mar 6, 2015</li>
+                                            <li><a href="#"><i class="fa fa-comments"></i> 0</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- End Blog Thumb -->
+                                <!-- Blog Thumb -->
+                                <div class="blog-thumb margin-bottom-20">
+                                    <div class="blog-thumb-hover">
+                                        <img src="~/assets/img/blog/img19.jpg" alt="">
+                                        <a class="hover-grad" href="blog_single.html"><i class="fa fa-photo"></i></a>
+                                    </div>
+                                    <div class="blog-thumb-desc">
+                                        <h3><a href="blog_single.html">Learn something new every day</a></h3>
+                                        <ul class="blog-thumb-info">
+                                            <li>Mar 6, 2015</li>
+                                            <li><a href="#"><i class="fa fa-comments"></i> 0</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- End Blog Thumb -->
+                                <!-- Blog Thumb -->
+                                <div class="blog-thumb">
+                                    <div class="blog-thumb-hover">
+                                        <img src="~/assets/img/blog/img8.jpg" alt="">
+                                        <a class="hover-grad" href="blog_single.html"><i class="fa fa-volume-up"></i></a>
+                                    </div>
+                                    <div class="blog-thumb-desc">
+                                        <h3><a href="blog_single.html">Student finance: Crunch the numbers cleverly</a></h3>
+                                        <ul class="blog-thumb-info">
+                                            <li>Mar 6, 2015</li>
+                                            <li><a href="#"><i class="fa fa-comments"></i> 0</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- End Blog Thumb -->
+                            </div>
+                        </div><!--/end row-->
+                    </div>
+                </div>
+                <!-- End Tab Content -->
+            </div>
+            <!-- End Tab v4 -->
+            <!-- Blog Grid -->
+            <div class="margin-bottom-50">
+                @Html.Action("_FeaturedBusinesses")
+            </div>
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
-
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        </div>
+        <!-- End Main Content -->
+        <!-- Right Sidebar -->
+        <div class="col-md-3">
+            <!-- Blog Thumb v3 -->
+            @Html.Action("_Comments")
+            <!-- End Blog Thumb v3 -->
+            <!-- Social Shares -->
+            <div class="margin-bottom-50">
+                <h2 class="title-v4">Social</h2>
+                <ul class="blog-social-shares">
+                    <li>
+                        <i class="rounded-x fb fa fa-facebook"></i>
+                        <a class="rounded-3x" href="#">Like</a>
+                        <span class="counter">31,702</span>
+                    </li>
+                    <li>
+                        <i class="rounded-x tw fa fa-twitter"></i>
+                        <a class="rounded-3x" href="#">Follow Us</a>
+                        <span class="counter">164,290</span>
+                    </li>
+                    <li>
+                        <i class="rounded-x gp fa fa-google-plus"></i>
+                        <a class="rounded-3x" href="#">Add to circle</a>
+                        <span class="counter">5,425,764</span>
+                    </li>
+                </ul>
+            </div>
+            <!-- End Social Shares -->
+            <!-- Twitter Posts -->
+            <div class="margin-bottom-50">
+                <h2 class="title-v4">Twitter Posts</h2>
+                @*<a class="twitter-timeline"
+                   href="https://twitter.com/TwitterDev"
+                   data-tweet-limit="3">
+                    Tweets by @@TwitterDev
+                </a>*@
+                <a class="twitter-timeline" data-width="300" data-height="600" href="https://twitter.com/owagoner/lists/findlocal" data-tweet-limit="4"></a>
+                <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+            <!-- End Twitter Posts -->
+        </div>
+        <!-- End Right Sidebar -->
     </div>
 </div>
