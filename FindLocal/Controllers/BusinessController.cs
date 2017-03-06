@@ -22,7 +22,7 @@ namespace FindLocal.Controllers
             Business b = bs.getBusinessById(id);
             b.comments = cs.getCommentsByBusinessId(id);
             b.media = ms.getMediaByBusinessId(id).FirstOrDefault();
-            b.address = ads.getAddressByBusinessId(id).FirstOrDefault();
+            b.address = ads.getAddressByBusinessId(id).FirstOrDefault();           
             vm.business = b;
 
             vm.relatedBusiness = bs.getBusinessesByType(b.businessTypeId);
@@ -32,6 +32,38 @@ namespace FindLocal.Controllers
             }
 
             return View(vm);
+        }
+        public ActionResult List(int id) {
+            ViewBag.businessType = getBusinessType(id);
+            List<Business> b = new List<Business>();
+            b = bs.getBusinessesByType(id);
+            foreach (var business in b) {
+                business.media = new Media();
+                business.media.featureImage = ms.getFeaturedByBusinessId((int)business.id);
+            }            
+            return View(b);
+        }
+
+        private string getBusinessType(int id) {
+            if (id == 1)
+            {
+                return "Barbers";
+            }
+            else if (id == 2)
+            {
+                return "Salons";
+            }
+            else if (id == 3)
+            {
+                return "Mechanics";
+            }
+            else if (id == 4)
+            {
+                return "Oil Change";
+            }
+            else {
+                return "Not Found";
+            }
         }
     }
 }

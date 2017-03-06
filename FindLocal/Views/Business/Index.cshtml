@@ -19,7 +19,7 @@
                             <li class="rounded-x" data-target="#portfolio-carousel" data-slide-to="@cnt"></li>
                             cnt++;
                         }
-                                                
+
                     </ol>
                     <div class="carousel-inner">
                         <div class="item active">
@@ -30,60 +30,35 @@
                             <div class="item">
                                 <img class="img-responsive" src="@src" alt="">
                             </div>
-                        }                     
-                    </div>
-                </div>
-            </div>
-            <!-- End Blog Grid -->
-            @*<div class="blog-grid margin-bottom-50">
-                <div class="carousel slide carousel-v2" id="portfolio-carousel">
-                    <div class="carousel-inner">
-                        <div class="item active">
-                            <img class="img-responsive" src="@Model.business.media.featureImage" alt="">
-                        </div>
-                        @foreach (var src in Model.business.media.images)
-                        {
-                            <div class="item">
-                                <img class="img-responsive" src="@src" alt="">
-                            </div>
                         }
-                        
                     </div>
-                    <a class="left carousel-control rounded-x" href="#portfolio-carousel" role="button" data-slide="prev">
-                        <i class="fa fa-angle-left arrow-prev"></i>
-                    </a>
-                    <a class="right carousel-control rounded-x" href="#portfolio-carousel" role="button" data-slide="next">
-                        <i class="fa fa-angle-right arrow-next"></i>
-                    </a>
                 </div>
-                <div class="blog-grid-inner">
-                    <h3>@Model.business.name</h3>
-                    <ul class="blog-grid-info">
-                        <li>Susie Lau</li>
-                        <li>Mar 7, 2015</li>
-                        <li><a href="#"><i class="fa fa-comments"></i> 0</a></li>
-                    </ul>
-                    <p>@Model.business.description</p>
-                    <a class="r-more" href="blog_single.html">Read More</a>
-                </div>
-            </div>*@
+                <h4>Description:</h4>
+                <p>@Model.business.description</p>
+                <h4>Business Hours:</h4>
+                <p>Times here</p>
+            </div>
+            <div class="margin-bottom-50">
+                <h2 class="title-v4">Location</h2>
+                <div id="map" style="height:300px"></div>
+            </div>
 
-            <!-- Blog Thumb v4 -->
+
             <div class="margin-bottom-50">
                 <h2 class="title-v4">Related Businesses</h2>
                 <div class="row margin-bottom-50">
-                @foreach (var business in Model.relatedBusiness)
-                {
-                    <div class="col-sm-3 col-xs-6 sm-margin-bottom-30">
-                        <!-- Blog Thumb v4 -->
-                        <div class="blog-thumb-v4">
-                            <img class="img-responsive margin-bottom-10" src="@business.media.featureImage" alt="">
-                            @Html.ActionLink(business.name,"Index","Business",new { id = business.id }, null)                            
+                    @foreach (var business in Model.relatedBusiness)
+                    {
+                        <div class="col-sm-3 col-xs-6 sm-margin-bottom-30">
+                            <!-- Blog Thumb v4 -->
+                            <div class="blog-thumb-v4">
+                                <img class="img-responsive margin-bottom-10" src="@business.media.featureImage" alt="">
+                                @Html.ActionLink(business.name, "Index", "Business", new { id = business.id }, null)
+                            </div>
+                            <!-- End Blog Thumb v4 -->
                         </div>
-                        <!-- End Blog Thumb v4 -->
-                    </div>
-                }
-                                      
+                    }
+
                 </div><!--/end row-->
             </div>
             <!-- End Blog Thumb v4 -->
@@ -103,7 +78,7 @@
                         </div>
                         <hr />
                     }
-                    
+
                 </div>
                 <!-- End Blog Comments v2 -->
             </div>
@@ -141,41 +116,40 @@
         <div class="col-md-3">
             <!-- Blog Thumb v3 -->
             @*<div class="margin-bottom-50">
-                <h2 class="title-v4">Blog &amp; Comments</h2>
-                <div class="blog-thumb-v3">
-                    <small><a href="#">Evan Bartlett</a></small>
-                    <h3><a href="#">Cameron's silence on defence is shameful</a></h3>
-                </div>
-                <hr class="hr-xs">
-                <div class="blog-thumb-v3">
-                    <small><a href="#">Jonathan Owen</a></small>
-                    <h3><a href="#">Architects plan to stop skyscrapers from blocking out sunlight</a></h3>
-                </div>
-                <hr class="hr-xs">
-                <div class="blog-thumb-v3">
-                    <small><a href="#">Susie Lau</a></small>
-                    <h3><a href="#">Fashion's first selfies: It was a 16th-century German accountant who started the trend for style blogging</a></h3>
-                </div>
-                <hr class="hr-xs">
-                <div class="blog-thumb-v3">
-                    <small><a href="#">John Rentoul</a></small>
-                    <h3><a href="#">How to run a country: A 10 point manifesto for leaders who stand – and want to deliver</a></h3>
-                </div>
-                <hr class="hr-xs">
-                <div class="blog-thumb-v3">
-                    <small><a href="#">Richard Garner</a></small>
-                    <h3><a href="#">Controversial plan to test new primary school pupils infuriates teachers</a></h3>
-                </div>
-            </div>*@
+                    <h2 class="title-v4">Blog &amp; Comments</h2>
+                    <div class="blog-thumb-v3">
+                        <small><a href="#">Evan Bartlett</a></small>
+                        <h3><a href="#">Cameron's silence on defence is shameful</a></h3>
+                    </div>
+                    <hr class="hr-xs">
+                    <div class="blog-thumb-v3">
+                        <small><a href="#">Jonathan Owen</a></small>
+                        <h3><a href="#">Architects plan to stop skyscrapers from blocking out sunlight</a></h3>
+                    </div>
+                    <hr class="hr-xs">
+                    <div class="blog-thumb-v3">
+                        <small><a href="#">Susie Lau</a></small>
+                        <h3><a href="#">Fashion's first selfies: It was a 16th-century German accountant who started the trend for style blogging</a></h3>
+                    </div>
+                    <hr class="hr-xs">
+                    <div class="blog-thumb-v3">
+                        <small><a href="#">John Rentoul</a></small>
+                        <h3><a href="#">How to run a country: A 10 point manifesto for leaders who stand – and want to deliver</a></h3>
+                    </div>
+                    <hr class="hr-xs">
+                    <div class="blog-thumb-v3">
+                        <small><a href="#">Richard Garner</a></small>
+                        <h3><a href="#">Controversial plan to test new primary school pupils infuriates teachers</a></h3>
+                    </div>
+                </div>*@
             <!-- End Blog Thumb v3 -->
-
             <!-- Twitter Posts -->
             <div class="margin-bottom-50">
                 <h2 class="title-v4">Twitter Posts</h2>
                 <a class="twitter-timeline"
                    @{ var twitterHandle = "https://twitter.com/" + Model.business.twitterHandle;}
                    href="@Html.Raw(twitterHandle)"
-                   data-tweet-limit="3">                    
+                   data-tweet-limit="3">
                 </a>
                 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
@@ -184,3 +158,21 @@
     </div>
 </div>
 <!--=== End Container Part ===-->
+@section scripts
+    {
+<script>
+      function initMap() {
+        var busLoc = {lat: @Html.Raw(Model.business.address.latitude), lng: @Html.Raw(Model.business.address.longitude)};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 14,
+          center: busLoc
+        });
+        var marker = new google.maps.Marker({
+            position: busLoc,
+          map: map
+        });
+      }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRbgB_gAIeZKN-Wc_soTa6n_xCijGayTY&callback=initMap">
+</script>
+}

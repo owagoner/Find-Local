@@ -1,0 +1,90 @@
+﻿@model List<FindLocal.Models.Business>
+
+<div class="margin-bottom-50">
+    <h2 class="title-v4">@ViewBag.businessType</h2>
+
+    <!-- Blog Grid -->
+    <div class="row margin-bottom-50">
+    @foreach (var business in Model)
+    {
+        <div class="col-sm-6 sm-margin-bottom-50">
+            <div class="blog-grid">
+                <img class="img-responsive" src="@business.media.featureImage" alt="">
+                <h3>
+                    @Html.ActionLink(business.name,"Index","Business",new { id = business.id },null)
+                </h3>     
+            </div>
+        </div>
+    }
+        @*<div class="col-sm-6 sm-margin-bottom-50">
+            <div class="blog-grid">
+                <img class="img-responsive" src="assets/img/blog/img46.jpg" alt="">
+                <h3><a href="blog_single.html">9 Most visited Mountains in the world</a></h3>
+                <ul class="blog-grid-info">
+                    <li>Richard Garner</li>
+                    <li>Mar 6, 2015</li>
+                    <li><a href="#"><i class="fa fa-comments"></i> 0</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="blog-grid">
+                <img class="img-responsive" src="assets/img/blog/img50.jpg" alt="">
+                <h3><a href="blog_single.html">10 Most beautiful beaches</a></h3>
+                <ul class="blog-grid-info">
+                    <li>Richard Garner</li>
+                    <li>Mar 6, 2015</li>
+                    <li><a href="#"><i class="fa fa-comments"></i> 0</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row margin-bottom-50">
+        <div class="col-sm-6 sm-margin-bottom-50">
+            <div class="blog-grid">
+                <img class="img-responsive" src="assets/img/blog/img42.jpg" alt="">
+                <h3><a href="blog_single.html">6 Facts about dogs</a></h3>
+                <ul class="blog-grid-info">
+                    <li>Richard Garner</li>
+                    <li>Mar 6, 2015</li>
+                    <li><a href="#"><i class="fa fa-comments"></i> 0</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="blog-grid">
+                <img class="img-responsive" src="assets/img/blog/img49.jpg" alt="">
+                <h3><a href="blog_single.html">Why we love watermelon...</a></h3>
+                <ul class="blog-grid-info">
+                    <li>Richard Garner</li>
+                    <li>Mar 6, 2015</li>
+                    <li><a href="#"><i class="fa fa-comments"></i> 0</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row margin-bottom-50">
+        <div class="col-sm-6 sm-margin-bottom-50">
+            <div class="blog-grid">
+                <img class="img-responsive" src="assets/img/blog/img48.jpg" alt="">
+                <h3><a href="blog_single.html">5 Facts about Coca-Cola</a></h3>
+                <ul class="blog-grid-info">
+                    <li>Richard Garner</li>
+                    <li>Mar 6, 2015</li>
+                    <li><a href="#"><i class="fa fa-comments"></i> 0</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="blog-grid">
+                <img class="img-responsive" src="assets/img/blog/img47.jpg" alt="">
+                <h3><a href="blog_single.html">7 tips of writing that you didn't know</a></h3>
+                <ul class="blog-grid-info">
+                    <li>Richard Garner</li>
+                    <li>Mar 6, 2015</li>
+                    <li><a href="#"><i class="fa fa-comments"></i> 0</a></li>
+                </ul>
+            </div>
+        </div>*@
+    </div>
+</div>
