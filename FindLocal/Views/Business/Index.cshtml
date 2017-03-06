@@ -36,7 +36,7 @@
                 <h4>Description:</h4>
                 <p>@Model.business.description</p>
                 <h4>Business Hours:</h4>
-                <p>Times here</p>
+                <p>@Html.Raw(Model.business.businessHours.Replace(",","<br/>"))</p>
             </div>
             <div class="margin-bottom-50">
                 <h2 class="title-v4">Location</h2>

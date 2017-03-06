@@ -28,5 +28,6 @@ namespace FindLocal.Models
         //} set { } }
         public Address address { get; set; }
         public string twitterHandle { get; set; }
+        public string businessHours { get; set; }
     }
 }
