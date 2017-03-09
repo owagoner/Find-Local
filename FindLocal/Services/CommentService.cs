@@ -9,7 +9,7 @@ namespace FindLocal.Services
     public class CommentService
     {
 
-        private const string baseUrl = "https://commentservice.cfapps.io";
+        private const string baseUrl = "https://commentservice2.cfapps.io";
         private BusinessService bs = new BusinessService();
         public List<Comment> getLatestNComments(int n) {
             string route = "/api/comment/latest/" + n;

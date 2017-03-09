@@ -12,7 +12,7 @@ namespace FindLocal.Services
     public class AddressService
     {
 
-        private const string baseUrl = "https://addressservice.cfapps.io";
+        private const string baseUrl = "https://addressservice2.cfapps.io";
 
         public List<Address> getAddressByBusinessId(int id)
         {
